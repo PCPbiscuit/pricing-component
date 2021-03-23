@@ -1,0 +1,244 @@
+.container {
+  min-height: 100vh;
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9faff;
+  background-image: url('/bg-pattern.svg');
+  background-size: 100% 50%;
+  background-repeat: no-repeat;
+}
+
+$primary: #293356;
+$secondary: #848ead;
+$green: #10d8c4;
+
+.main {
+  padding: 15rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title_block {
+  display: flex;
+  flex-direction: column;
+  background-image: url('/pattern-circles.svg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  align-items: center;
+  padding: 2rem;
+  h1 {
+    margin-bottom: 12px;
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 38px;
+    color: $primary;
+  }
+  h5 {
+    margin: 0;
+    color: $secondary;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 20px;
+  }
+}
+
+.pricing_block {
+  background-color: #ffffff;
+  box-shadow: 0px 20px 30px -5px rgba(127, 137, 185, 0.152073);
+  border-radius: 8px;
+  width: 540px;
+  display: flex;
+  padding: 32px 40px;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 42px;
+}
+
+.pricing_main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.pricing_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  span {
+    &:first-child {
+      font-weight: 800;
+      font-size: 14px;
+      line-height: 19px;
+      text-align: center;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: $secondary;
+    }
+    &.price {
+      font-weight: 800;
+      font-size: 40px;
+      line-height: 55px;
+      text-align: right;
+      letter-spacing: -1px;
+      color: $primary;
+      display: flex;
+      align-items: center;
+    }
+    &.month {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 22px;
+      color: $secondary;
+      text-transform: none;
+      margin-left: 8px;
+      letter-spacing: normal;
+    }
+  }
+}
+
+.price_progress {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.rectangle_bar {
+  width: 100%;
+
+  input[type='range'] {
+    -webkit-appearance: none;
+    width: 100%;
+    background-color: #ecf0fb;
+    height: 8px;
+    border-radius: 5px;
+    position: relative;
+    outline: none;
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-image: url('/icon-slider.svg');
+      background-size: auto;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: $green;
+      box-shadow: 0px 15px 30px rgba(0, 255, 231, 0.6);
+      top: 4px;
+      cursor: pointer;
+    }
+  }
+}
+
+.footer {
+  width: 100%;
+  height: 100px;
+  border-top: 1px solid #eaeaea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer img {
+  margin-left: 0.5rem;
+}
+
+.footer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title a {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+.title a:hover,
+.title a:focus,
+.title a:active {
+  text-decoration: underline;
+}
+
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 4rem;
+}
+
+.title,
+.description {
+  text-align: center;
+}
+
+.description {
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+
+.code {
+  background: #fafafa;
+  border-radius: 5px;
+  padding: 0.75rem;
+  font-size: 1.1rem;
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace;
+}
+
+.grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin-top: 3rem;
+}
+
+.card {
+  margin: 1rem;
+  flex-basis: 45%;
+  padding: 1.5rem;
+  text-align: left;
+  color: inherit;
+  text-decoration: none;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.card:hover,
+.card:focus,
+.card:active {
+  color: #0070f3;
+  border-color: #0070f3;
+}
+
+.card h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+}
+
+.card p {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.logo {
+  height: 1em;
+}
+
+@media (max-width: 600px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+}
