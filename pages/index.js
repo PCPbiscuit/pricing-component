@@ -58,6 +58,8 @@ const Home = () => {
                   type="range"
                   min="1"
                   max="100"
+                  name="range"
+                  title="rangeinput"
                   value={range}
                   onChange={v => {
                     setRange(v.target.value);
