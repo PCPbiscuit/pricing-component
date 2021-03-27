@@ -1,26 +1,34 @@
 import Head from 'next/head';
 import { useState } from 'react';
 import styles from '../styles/Home.module.scss';
+import classNames from 'classnames';
 
 const Home = () => {
   const [range, setRange] = useState(0);
+  const [checked, setCheck] = useState(false);
+
+  const options = [
+    'Unlimited websites',
+    '100% data ownership',
+    'Email reports',
+  ];
 
   let price, views;
   if (range < 5) {
     views = '10K PAGEVIEWS';
-    price = '$8';
+    price = 8;
   } else if (range >= 5 && range < 10) {
     views = '50K PAGEVIEWS';
-    price = '$12';
+    price = 12;
   } else if (range >= 10 && range < 50) {
     views = '100K PAGEVIEWS';
-    price = '$16';
+    price = 16;
   } else if (range >= 50 && range < 100) {
     views = '500K PAGEVIEWS';
-    price = '$24';
+    price = 24;
   } else {
     views = '1M PAGEVIEWS';
-    price = '$36';
+    price = 36;
   }
 
   return (
@@ -40,7 +48,7 @@ const Home = () => {
             <div className={styles.pricing_title}>
               <span>{views}</span>
               <span className={styles.price}>
-                {price}
+                ${checked ? price * 0.75 : price}
                 <span className={styles.month}>/ month</span>
               </span>
             </div>
@@ -60,8 +68,46 @@ const Home = () => {
                 ></input>
               </div>
             </div>
+            <div className={styles.billing_block}>
+              <span className={styles.billing_title}>Monthly Billing</span>
+              <div
+                className={classNames(styles.check_slider, {
+                  [styles.active_slider]: checked,
+                })}
+                onClick={() => {
+                  setCheck(!checked);
+                }}
+              >
+                <span />
+              </div>
+              <span className={styles.billing_title}>Yearly Billing</span>
+              <span className={styles.discount_title}>25% discount</span>
+            </div>
           </div>
-          <div className={styles.pricing_footer}></div>
+          <div className={styles.pricing_footer}>
+            <div className={styles.feat_list}>
+              {options.map((k, i) => (
+                <div className={styles.feat_option} key={i}>
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="9"
+                      height="8"
+                    >
+                      <path
+                        fill="none"
+                        stroke="#10D8C4"
+                        stroke-width="2"
+                        d="M1 4.134l1.907 1.908L7.949 1"
+                      />
+                    </svg>
+                  </span>
+                  {k}
+                </div>
+              ))}
+            </div>
+            <div className={styles.button}>Start my trial</div>
+          </div>
         </div>
       </main>
     </div>

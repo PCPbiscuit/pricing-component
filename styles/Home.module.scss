@@ -54,7 +54,7 @@ $green: #10d8c4;
   border-radius: 8px;
   width: 540px;
   display: flex;
-  padding: 32px 40px;
+  padding: 32px 0;
   flex-direction: column;
   align-items: center;
   margin-top: 42px;
@@ -64,6 +64,7 @@ $green: #10d8c4;
   display: flex;
   flex-direction: column;
   width: 100%;
+  padding: 0 40px;
 }
 
 .pricing_title {
@@ -131,10 +132,120 @@ $green: #10d8c4;
       background-position: center;
       background-repeat: no-repeat;
       background-color: $green;
-      box-shadow: 0px 15px 30px rgba(0, 255, 231, 0.6);
+      box-shadow: 0px 15px 30px rgba($green, 0.6);
       top: 4px;
       cursor: pointer;
+      transition: 0.35s ease;
+      &:hover {
+        background-color: darken($green, 5%);
+        box-shadow: 0px 15px 30px rgba($green, 0.8);
+      }
     }
+  }
+}
+
+.billing_block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $secondary;
+  margin-top: 40px;
+}
+
+.check_slider {
+  background-color: #cfd8ef;
+  border-radius: 15px;
+  width: 44px;
+  height: 22px;
+  padding: 4px;
+  cursor: pointer;
+  margin-right: 16px;
+  display: flex;
+  justify-content: flex-start;
+  transition: 0.5s ease;
+  span {
+    transition: 0.5s ease;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    display: flex;
+    background-color: white;
+  }
+}
+
+.active_slider {
+  background-color: $green;
+  span {
+    transform: translateX(150%);
+  }
+}
+
+.billing_title {
+  margin-right: 16px;
+  font-size: 12px;
+  line-height: 140%;
+  font-weight: 600;
+}
+
+.discount_title {
+  color: #ff8d68;
+  font-weight: 800;
+  font-size: 10px;
+  line-height: 14px;
+  text-align: center;
+  padding: 2px 6px;
+  border-radius: 9px;
+  width: 80px;
+  height: 18px;
+  background-color: #feede8;
+}
+
+.pricing_footer {
+  border-top: 1px solid #ecf0fb;
+  width: 100%;
+  display: flex;
+  padding: 32px 40px;
+  margin-top: 40px;
+  padding-bottom: 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.feat_list {
+  display: flex;
+  flex-direction: column;
+}
+
+.feat_option {
+  margin-top: 12px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  color: $secondary;
+  &:first-child {
+    margin-top: 0;
+  }
+  span {
+    margin-right: 16px;
+  }
+}
+
+.button {
+  color: #becdff;
+  border-radius: 21px;
+  background-color: #293356;
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  padding: 12px 46px;
+  display: flex;
+  align-items: center;
+  height: 42px;
+  cursor: pointer;
+  transition: 0.25s ease;
+  &:hover {
+    color: white;
   }
 }
 
