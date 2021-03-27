@@ -9,6 +9,9 @@
   background-image: url('/bg-pattern.svg');
   background-size: 100% 50%;
   background-repeat: no-repeat;
+  @media all and (max-width: 576px) {
+    padding: 0 1rem;
+  }
 }
 
 $primary: #293356;
@@ -33,6 +36,18 @@ $green: #10d8c4;
   align-items: center;
   padding: 2rem;
   margin-bottom: 3.5rem;
+  @media all and (max-width: 576px) {
+    margin-bottom: 0;
+    h1 {
+      font-size: 20px;
+      line-height: 27px;
+      text-align: center;
+    }
+    h5 {
+      font-size: 13px;
+      line-height: 23px;
+    }
+  }
   h1 {
     margin-bottom: 12px;
     font-size: 28px;
@@ -59,7 +74,7 @@ $green: #10d8c4;
   flex-direction: column;
   align-items: center;
   margin-top: 42px;
-  @media all and(max-width: 768px) {
+  @media all and(max-width: 576px) {
     width: auto;
   }
 }
@@ -212,7 +227,7 @@ $green: #10d8c4;
   padding-bottom: 0;
   justify-content: space-between;
   align-items: center;
-  @media all and (max-width: 768px) {
+  @media all and (max-width: 576px) {
     flex-direction: column;
   }
 }
@@ -220,7 +235,7 @@ $green: #10d8c4;
 .feat_list {
   display: flex;
   flex-direction: column;
-  @media all and (max-width: 768px) {
+  @media all and (max-width: 576px) {
     margin-bottom: 40px;
     width: 100%;
     align-items: center;
