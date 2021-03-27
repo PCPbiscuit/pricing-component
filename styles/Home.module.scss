@@ -59,6 +59,9 @@ $green: #10d8c4;
   flex-direction: column;
   align-items: center;
   margin-top: 42px;
+  @media all and(max-width: 768px) {
+    width: auto;
+  }
 }
 
 .pricing_main {
@@ -197,7 +200,6 @@ $green: #10d8c4;
   padding: 2px 6px;
   border-radius: 9px;
   width: 80px;
-  height: 18px;
   background-color: #feede8;
 }
 
@@ -210,11 +212,19 @@ $green: #10d8c4;
   padding-bottom: 0;
   justify-content: space-between;
   align-items: center;
+  @media all and (max-width: 768px) {
+    flex-direction: column;
+  }
 }
 
 .feat_list {
   display: flex;
   flex-direction: column;
+  @media all and (max-width: 768px) {
+    margin-bottom: 40px;
+    width: 100%;
+    align-items: center;
+  }
 }
 
 .feat_option {
